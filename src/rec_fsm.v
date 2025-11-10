@@ -61,7 +61,7 @@ always @(posedge clk or negedge rst) begin
         state <= next_state;
 end
 
-always @(*) begin
+always @(posedge clk) begin
     next_state = state;
     s_out = 8'hff;
 

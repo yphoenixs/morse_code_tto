@@ -4,6 +4,7 @@
 `include "morse_top.v"
 `include "trans_fsm.v"
 `include "rec_fsm.v"
+`include "rx_cw_m.v"
 /* This testbench just instantiates the module and makes some convenient wires
    that can be driven / tested by the cocotb test.py.
 */
@@ -31,7 +32,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-  tt_um_morse dut(
+  tt_um_morse_w_serial dut(
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
